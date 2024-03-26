@@ -1,0 +1,116 @@
+@headerHeight: 48px;
+@siderWidth: 228px;
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.admin_header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: @headerHeight;
+  box-sizing: border-box;
+  background-color: #001529;
+  padding: 0 16px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.site-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background: #f0f2f5;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.admin_logo {
+  height: 28px;
+  margin-right: 12px;
+}
+
+.admin_layout_wrapper {
+  height: 100vh;
+  padding-top: @headerHeight;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.admin_content {
+  padding: 16px;
+  box-sizing: border-box;
+  :global {
+    :where(.css-dev-only-do-not-override-djtmh8).ant-tabs-top > .ant-tabs-nav::before,
+    :where(.css-dev-only-do-not-override-djtmh8).ant-tabs-top > div > .ant-tabs-nav::before {
+      border-bottom: unset !important;
+    }
+
+    :where(.css-dev-only-do-not-override-djtmh8).ant-tabs-top > .ant-tabs-nav,
+    :where(.css-dev-only-do-not-override-djtmh8).ant-tabs-bottom > .ant-tabs-nav,
+    :where(.css-dev-only-do-not-override-djtmh8).ant-tabs-top > div > .ant-tabs-nav,
+    :where(.css-dev-only-do-not-override-djtmh8).ant-tabs-bottom > div > .ant-tabs-nav {
+      margin: unset !important;
+    }
+  }
+}
+
+.site_layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background: #f0f2f5;
+}
+
+.nav_tab_wrapper {
+  :global {
+    .ant-tabs-nav {
+      background-color: #fff;
+      padding: 16px;
+      box-sizing: border-box;
+      border-radius: 8px;
+    }
+    .ant-tabs-content-holder {
+      margin-top: 16px;
+      height: calc(100vh - 268px);
+      overflow: auto;
+      width: 100%;
+
+      .ant-tabs-content-top {
+        height: 100%;
+        .ant-tabs-tabpane-active {
+          height: 100%;
+        }
+      }
+    }
+  }
+  .ant-tabs-nav {
+    background: #fff;
+    margin: 24px 24px 0 24px;
+    padding: 16px;
+  }
+}
